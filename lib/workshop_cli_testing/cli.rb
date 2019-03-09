@@ -5,7 +5,8 @@ module WorkshopCliTesting
   class CLI < Thor
     desc "weather", "get weather in city"
     def weather(city)
-      puts WorkshopCliTesting::Weather.get_weather(city)
+      weather = WorkshopCliTesting::Weather.new
+      puts weather.get_weather(city)
     end
   end
 end

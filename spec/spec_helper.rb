@@ -1,5 +1,7 @@
 require "bundler/setup"
 require "workshop_cli_testing"
+require "rspec-power_assert"
+require "webmock/rspec"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -10,5 +12,9 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  def load_fixture(filename)
+    File.read(File.dirname(__FILE__) + "/fixtures/#{filename}")
   end
 end

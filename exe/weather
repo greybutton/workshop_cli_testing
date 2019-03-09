@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require "workshop_cli_testing/cli"
+WorkshopCliTesting::CLI.start
